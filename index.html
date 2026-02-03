@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YumeMart | International Trading & E-Commerce</title>
+  <meta name="description" content="YumeMart – International Trading, Retail & E-Commerce Solutions" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="logo.png" type="image/x-icon">
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #307F56; /* ONLY CHANGE HERE */
+      color: #222;
+      line-height: 1.6;
+    }
+/* ===== NAV LINKS COLOR ===== */
+header nav a {
+  color: #F5E27A;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+header nav a:hover {
+  color: #FFFFFF;
+}
+
+    a { text-decoration: none; color: inherit; }
+
+    /* ===== FIXED NAVBAR (ONE LINE ONLY) ===== */
+header {
+  background: linear-gradient(135deg, #0E3B2E, #145A45);
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  overflow: hidden;
+}
+
+.logo-wrap {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.logo-wrap img {
+  height: 52px;
+}
+
+/* NAV LINKS */
+nav {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+nav::-webkit-scrollbar {
+  display: none;
+}
+
+nav a {
+  color: #F5E27A;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 0;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #ffffff;
+}
+
+/* MOBILE SAFETY */
+@media (max-width: 768px) {
+  nav {
+    max-width: calc(100vw - 80px);
+  }
+}
+
+    nav a:hover { opacity: 1; }
+
+    .hero {
+      background: url('yume.jpeg') center center / contain no-repeat;
+      background-color: #0f6f4f;
+      height: 420px;
+      width: 100%;
+    }
+
+    section { padding: 80px 60px; }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h3 { font-size: 32px; }
+
+    .section-title p {
+      color: #666;
+      margin-top: 10px;
+    }
+
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .about img {
+      width: 100%;
+      border-radius: 16px;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .service-box {
+      background: #fff;
+      padding: 35px;
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    .brands {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  justify-items: center;
+  align-items: center;
+}
+    .brands-box {
+  padding: 30px;
+}
+
+.brands img {
+  width: 140px;
+  max-height: 80px;
+  object-fit: contain;
+  opacity: 0.85;
+  transition: all 0.3s ease;
+}
+
+.brands img:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+.brand-item {
+  width: 100%;
+  height: 120px;
+  background: #f8f8f8;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-item img {
+  max-width: 140px;
+  max-height: 80px;
+  object-fit: contain;
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  align-items: center;
+}
+
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  white-space: nowrap; /* هذا هو السر */
+  font-size: 16px;
+}
+
+.contact-row .icon {
+  font-size: 18px;
+  min-width: 24px;
+  text-align: center;
+}
+
+.contact-row .text {
+  white-space: nowrap;
+}
+
+
+
+
+/* ===== QR BOX ===== */
+    .qr-box {
+    background: #F4DE3A;
+      border-radius: 20px;
+      padding: 50px;
+      max-width: 900px;
+      margin: auto;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .qr-box h3 {
+      font-size: 28px;
+      margin-bottom: 35px;
+    }
+
+    .qr-grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto); /* اثنين جنب بعض */
+  justify-content: center;               /* توسيطهم */
+  gap: 25px;                             /* قربهم من بعض */
+}
+
+.qr-item img {
+  width: 120px;        /* نفس حجم الصورة تقريبًا */
+  border-radius: 16px;
+}
+
+.qr-item p {
+  margin-top: 10px;
+  font-weight: 600;
+  color: #000000;      /* نفس لون النص بالصورة */
+  font-size: 18px;
+}
+    
+/* ===== SOCIAL LINKS BOX ===== */
+.social-box {
+  background: #F4DE3A;
+  border-radius: 20px;
+  padding: 50px;
+  max-width: 900px;
+  margin: auto;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.social-box h3 {
+  font-size: 28px;
+  margin-bottom: 35px;
+}
+
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  justify-items: center;
+}
+
+
+.social-item {
+  width: 100%;              /* ⬅️ مهم */
+  max-width: 160px;         /* حجم ثابت مرتب */
+  height: 140px;
+  background: #f4f6f5;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 0 0 1px #e5e5e5;
+  transition: all 0.3s ease;
+}
+
+/* ===== CENTER LOCATION (YUMEMART ONLY) ===== */
+#social-yumemart .social-grid a:last-child {
+  grid-column: 1 / -1;   /* ياخذ العمودين */
+  justify-self: center;  /* بالنص */
+}
+
+
+/* Fastners: لا تسمح بالكسر */
+.fastners-grid .social-item {
+  grid-column: auto !important;
+}
+
+
+
+.social-item img {
+  width: 60px;
+  margin-bottom: 12px;
+}
+
+.social-item span {
+  font-weight: 600;
+  font-size: 15px;
+  color: #0f6f4f;
+}
+    
+    footer {
+      background: #111;
+      color: #aaa;
+      text-align: center;
+      padding: 30px;
+      margin-top: 80px;
+    }
+
+    @media (max-width: 900px) {
+      header { flex-direction: row; }
+      nav a { font-size: 13px; }
+      .about { grid-template-columns: 1fr; }
+      section { padding: 60px 30px; }
+      .hero { height: 260px; }
+    }
+    @media (max-width: 900px) {
+  header { flex-direction: row; }
+  nav a { font-size: 13px; }
+  .about { grid-template-columns: 1fr; }
+  section { padding: 60px 30px; }
+  .hero { height: 260px; }
+}
+
+/* الصق هنا ⬇️ */
+.about-image-only {
+  padding: 0;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}
+
+.about-image-only img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  border-radius: 20px;
+}
+.brands-box {
+  background: #F2D93D;
+  border-radius: 20px;
+  padding: 50px;
+  max-width: 1100px;
+  margin: auto;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+.brands-box h3 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.brands-box p {
+  text-align: center;
+  color: #666;
+  margin-bottom: 40px;
+}
+    @media (max-width: 600px) {
+
+  .brands-box {
+    padding: 25px;
+    overflow: hidden;
+  }
+
+  .brands {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .brand-item {
+    width: 100%;
+  }
+
+}
+    @media (max-width: 600px) {
+  .brand-item:nth-child(5) {
+    grid-column: 1 / -1;   /* يخليه ياخذ العمودين */
+    justify-self: center; /* يتوسط */
+    max-width: 260px;     /* نفس عرض البوكسات */
+  }
+}
+    #services {
+  padding: 0 !important;
+}
+
+.services-image-only {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+}
+
+.services-image-only img {
+  width: 100%;
+  display: block;
+}
+ /* ===== FORCE FASTNERS ONE ROW (MOBILE FIX) ===== */
+.fastners-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 20px;
+  justify-items: center;
+}
+
+header,
+.navbar {
+  background: linear-gradient(
+    135deg,
+    #0E3B2E, /* أخضر غامق */
+    #145A45  /* أخضر أنعم */
+  );
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+/* ===== GLOBAL BOX TITLES STYLE ===== */
+.brands-box h3,
+.social-box h3,
+.qr-box h3 {
+  display: inline-block;
+  background: #ffffff;
+  padding: 14px 30px;
+  border-radius: 18px;
+  margin-bottom: 35px;
+  font-size: 26px;
+  font-weight: 700;
+  color: #0E3B2E; /* أخضر فخم */
+  box-shadow: 0 10px 25px rgba(0,0,0,0.18);
+}
+
+/* الوصف تحت العنوان (مثل Brands we work with) */
+.brands-box p {
+  margin-top: -15px;
+  margin-bottom: 40px;
+  color: #555;
+  font-size: 14px;
+}
+/* توسيط عناوين البوكسات */
+.brands-box,
+.social-box,
+.qr-box {
+  text-align: center;
+}
+ 
+    /* ================= FOOTER ================= */
+        footer {
+            background: rgba(0,0,0,0.8);
+            color: #ccc;
+            padding: 8px;
+            font-size: 13px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    /* ===== FORCE FASTNERS TITLE ONE LINE ===== */
+#social h3 {
+  white-space: nowrap;     /* يمنع النزول لسطر ثاني */
+  text-align: center;
+}
+
+/* تصغير خفيف للجوال فقط */
+@media (max-width: 600px) {
+  #social h3 {
+    font-size: 22px;
+    padding: 12px 20px;
+  }
+}
+
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo-wrap">
+    <img src="logo.png" alt="YumeMart Logo">
+  </div>
+  <nav>
+  <a href="#services">Services</a>
+  <a href="#brands">Brands</a>
+
+  <a href="Profile.pdf" target="_blank">
+    Company Profile
+  </a>
+
+  <a href="#contact">Contact</a>
+</nav>
+
+</header>
+
+<section class="hero"></section>
+
+<section id="about" class="about-image-only">
+  <img src="Photo.jpg" alt="About Image">
+</section>
+ 
+
+<section id="services" class="services-image-only">
+  <img src="services.jpg" alt="Our Services">
+</section>
+
+<section id="brands">
+  <div class="brands-box">
+
+    <h3>Our Partners</h3>
+    <p>Brands we work with</p>
+
+    <div class="brands">
+  <div class="brand-item"><img src="Daikin.png" alt="Brand 1"></div>
+  <div class="brand-item"><img src="rheem.png" alt="Brand 2"></div>
+  <div class="brand-item"><img src="pearl.png" alt="Brand 3"></div>
+  <div class="brand-item"><img src="airfel.png" alt="Brand 4"></div>
+  <div class="brand-item"><img src="blue star.png" alt="Brand 5"></div>
+</div>
+
+  </div>
+</section>
+  
+  <!-- ===== 1 SOCIAL MEDIA LINKS ===== -->
+<section id="social-yumemart">
+  <div class="social-box">
+    <h3>𝐘𝐮𝐦𝐞𝐌𝐚𝐫𝐭</h3>
+
+    <div class="social-grid">
+
+      <a href="https://www.instagram.com/yume_mart.bh" target="_blank" class="social-item">
+        <img src="instagram-icon.png" alt="Instagram">
+        <span>Instagram</span>
+      </a>
+
+      <a href="https://www.tiktok.com/@yume_mart.bh" target="_blank" class="social-item">
+        <img src="tiktok-icon.png" alt="TikTok">
+        <span>TikTok</span>
+      </a>
+
+      <a href="https://m.youtube.com/@Yumemart" target="_blank" class="social-item">
+        <img src="Youtube-icon.png" alt="YouTube">
+        <span>YouTube</span>
+      </a>
+
+      <a href="https://api.whatsapp.com/message/RVLQ7SJVOXXSI1?autoload=1&app_absent=0" target="_blank" class="social-item">
+        <img src="Whatsapp-icon.png" alt="WhatsApp">
+        <span>WhatsApp</span>
+      </a>
+      
+<a href="https://www.google.com/maps?q=26.1909975,50.5491089&entry=gps&shh=CAE&lucs=,94297699,94275415,94284484,94231188,94280568,47071704,94266210,94218641,94280827,94282134,94286869,100796589&g_ep=CAISEjI2LjAzLjEuODU1MjUwMDQwMBgAINeCAyptLDk0Mjk3Njk5LDk0Mjc1NDE1LDk0Mjg0NDg0LDk0MjMxMTg4LDk0MjgwNTY4LDQ3MDcxNzA0LDk0MjY2MjEwLDk0MjE4NjQxLDk0MjgwODI3LDk0MjgyMTM0LDk0Mjg2ODY5LDEwMDc5NjU4OUICQkg%3D&skid=df8c38bf-ccfb-4bd6-9153-e4f27bcb3c9a" target="_blank" class="social-item">
+        <img src="Location-icon.png" alt="Location">
+        <span>Location</span>
+      </a>
+    </div>
+  </div>
+</section>
+  <!-- ===== 2 SOCIAL MEDIA LINKS ===== -->
+<section id="social">
+  <div class="social-box">
+    <h3>𝐅𝐚𝐬𝐭𝐧𝐞𝐫𝐬 𝐒𝐞𝐫𝐯𝐢𝐜𝐞𝐬</h3>
+
+<div class="social-grid fastners-grid">
+
+      <a href="https://www.instagram.com/fasteners_services" target="_blank" class="social-item">
+        <img src="instagram-icon.png" alt="Instagram">
+        <span>Instagram</span>
+      </a>
+
+      <a href="https://www.tiktok.com/@fasteners_services" target="_blank" class="social-item">
+        <img src="tiktok-icon.png" alt="TikTok">
+        <span>TikTok</span>
+      </a>
+  </div>
+      
+  </div>
+</section>
+
+  
+<!-- ===== QR SECTION ===== -->
+<section id="qr">
+  <div class="qr-box">
+    <h3>Scan to Pay </h3>
+    <div class="qr-grid">
+      <div class="qr-item">
+        <img src="qr1.png">
+        <p>𝐘𝐮𝐦𝐞𝐌𝐚𝐫𝐭</p>
+      </div>
+      <div class="qr-item">
+        <img src="qr2.png">
+        <p>𝐅𝐚𝐬𝐭𝐧𝐞𝐫𝐬</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="contact">
+  <div class="qr-box">
+    <h3>Contact Us</h3>
+
+    <div class="contact">
+  <div class="contact-row">
+    <span class="icon">📧</span>
+    <span class="text">info@yumemart.com</span>
+  </div>
+
+  <div class="contact-row">
+    <span class="icon">📞</span>
+    <span class="text">+973 39922917 / +973 17799986</span>
+  </div>
+
+  <!-- العنوان -->
+  <div class="contact-row address">
+    <span class="icon">📍</span>
+    <span class="text">
+      <span>1738B, Road 1332</span><br>
+      <span>Block 713, Tubli, Bahrain</span>
+    </span>
+  </div>
+</div>
+
+
+
+
+</section>
+
+<footer class="site-footer">
+  © 2026 YumeMart | All Rights Reserved
+</footer>
+
+</body>
+</html>
+
+
+
