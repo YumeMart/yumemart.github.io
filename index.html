@@ -369,11 +369,12 @@ nav a:hover {
   }
 
 }
-    @media (max-width: 600px) {
-  .brand-item:nth-child(5) {
-    grid-column: 1 / -1;   /* يخليه ياخذ العمودين */
-    justify-self: center; /* يتوسط */
-    max-width: 260px;     /* نفس عرض البوكسات */
+   /* ===== MOBILE: Only Blue Star BIG & LAST ===== */
+@media (max-width: 600px) {
+  .brand-big {
+    grid-column: 1 / -1;
+    justify-self: center;
+    max-width: 260px;
   }
 }
     #services {
